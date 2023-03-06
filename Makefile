@@ -1,8 +1,11 @@
-CC=clang
-CFLAGS=-O2 -Wextra -std=c11 -pedantic
+CC		= gcc
+CFLAGS	=  -Wextra -Wall -std=c11 -pedantic
 
 make:
-	${CC} ${CFLAGS} -o timer timer.c
+	${CC} ${CFLAGS} ${DBUS} -O2 -o timer timer.c
+
+debug:
+	${CC} ${CFLAGS} ${DBUS} -ggdb -o timer_debug timer.c
 
 clean:
 	rm -f timer

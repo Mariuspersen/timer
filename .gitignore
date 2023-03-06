@@ -1,2 +1,4 @@
 .vscode
 timer
+.clangd
+timer_debug
