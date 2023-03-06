@@ -8,9 +8,15 @@ To compile:
 make
 ```
 
-To run:
+Usage:
 ```
-./timer
+usage:  timer <operation> [...]
+operations:
+        timer -h <hours>
+        timer -m <minutes>
+        timer -s <seconds>
+
+ use timer for available options
 ```
 
 To install simply type:

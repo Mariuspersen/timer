@@ -1,15 +1,16 @@
 CC		= gcc
-CFLAGS	=  -Wextra -Wall -std=c11 -pedantic
+CFLAGS	= -Wextra -Wall -std=c11 -pedantic
 
 make:
-	${CC} ${CFLAGS} ${DBUS} -O2 -o timer timer.c
+	${CC} ${CFLAGS} -O2 -o timer timer.c
 
 debug:
-	${CC} ${CFLAGS} ${DBUS} -ggdb -o timer_debug timer.c
+	${CC} ${CFLAGS} -ggdb -o timer_debug timer.c
 
 clean:
 	rm -f timer
-
+	rm -f timer_debug
+	
 install: make
 	mkdir -p /bin
 	cp -f timer /bin
